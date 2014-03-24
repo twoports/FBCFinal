@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="Soft225DoddNealFBCPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>DatabaseEntityClasses.Donations</class>
+    <class>DatabaseEntityClasses.Members</class>
+    <class>DatabaseEntityClasses.Suppliers</class>
+    <class>DatabaseEntityClasses.Donors</class>
+    <class>DatabaseEntityClasses.Clubs</class>
+    <class>DatabaseEntityClasses.Ordereditems</class>
+    <class>DatabaseEntityClasses.Orders</class>
+    <class>DatabaseEntityClasses.Donationtotals</class>
+    <class>DatabaseEntityClasses.Stockitems</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@tom.uopnet.plymouth.ac.uk:1521:orcl"/>
+      <property name="javax.persistence.jdbc.password" value="Duporth.1001"/>
+      <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+      <property name="javax.persistence.jdbc.user" value="gavindodd"/>
+    </properties>
+  </persistence-unit>
+</persistence>
