@@ -111,7 +111,7 @@
                         <input id="full-name" name="club-id" type="text" placeholder="Club ID"
                         class="input-xlarge">
                         <p class="help-block"></p>
-                        <jsp:setProperty name="book" property="*" />
+                        <jsp:setProperty name="club" property="*" />
 
              <%--
                 db.createConnection();

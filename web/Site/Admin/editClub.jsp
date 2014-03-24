@@ -113,7 +113,7 @@
                 <div class="control-group">
                     <label class="control-label">Club ID</label>
                     <div class="controls">
-                        <input id="full-name" name="club-id" type="text" placeholder="<%= club.getclubCode() %>"
+                        <input id="full-name" name="club-id" type="text" placeholder="club-code"
                         class="input-xlarge">
                         <p class="help-block"></p>
                     </div>
@@ -219,29 +219,8 @@
 	</div>
 </div>
      
-       <form name="amend" method="post" action="UpdateBook.jsp" >
-            <table border="0" cellpadding="10">
-                <tr>
-                    <td align="right">ISBN</td>
-                    <td><input type="text" name="isbn" size="20" readonly="true" value="" /></td>
-                </tr>
-                <tr>
-                    <td align="right">Title</td>
-                    <td><input type="text" name="title" size="60" value="<%= book.getTitle() %>" /></td>
-                </tr>
-                <tr>
-                    <td align="right">Author</td>
-                    <td><input type="text" name="author" size="60" value="<%= book.getAuthor() %>" /></td>
-                </tr>
-                <tr>
-                    <td align="right">Year</td>
-                    <td><input type="text" name="year" size="10" value="<%= book.getYear() %>" /></td>
-                </tr>
-                <tr>
-                    <td align="right">Price £</td>
-                    <td><input type="text" name="price" size="15" value="<%= book.getPrice() %>" /></td>
-                </tr>
-            </table> 
+       <form name="amend" method="post" action="UpdateClub.jsp" >
+             
 <div class="hero-unit">     
   <div class="row">
     <div class="col-lg-4">
