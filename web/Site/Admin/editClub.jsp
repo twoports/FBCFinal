@@ -6,6 +6,7 @@
 
 <%@page import="ClubAdmin.ClubDetails"%>
 <jsp:useBean id="db" scope="page" class="AccessDB.DBConnector" />
+<jsp:useBean id="club" scope="page" class="ClubAdmin.ClubDetails" />
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%-- 
@@ -43,13 +44,34 @@
                 <div class="span6">
                     <h1 class="muted">Food Bank Club Admin: Edit Clubs</h1>
                 </div>
-<%
-        ClubDetails club;    
-        String clubCode = request.getParameter("clubCode");
-        db.createConnection();
-        club = db.selectClubByClubCode(clubCode);
-        db.closeConnection();
+                
+                 <%
+        if (request.getParameter("button").equals("Cancel"))
+            response.sendRedirect("clubCodeError.jsp");
+        else {
         %>
+                
+            
+        
+            <jsp:setProperty name="club" property="*" />
+
+            <%
+                db.createConnection();
+                db.updateClub(club);
+                db.closeConnection();
+            %>
+
+            <br>
+            ClubCode <jsp:getProperty name="clubCode" property="clubCode" /> has been updated.
+            <br><br>
+            <a href="../../index.jsp">Back to the admin home page</a>
+
+        <%
+        } // end else
+        %>    
+                
+
+     
                 <div class="span4 offset2" style="margin-top:15px;">
                 <div id="browse_app">  
                     <a class="btn pull-right"href="../../loginJoinup.jsp">Logout</a>
